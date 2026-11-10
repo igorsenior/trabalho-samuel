@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Natal com produtos, árvores e presentes na Loja Natalina. Trabalho escolar de loja virtual.">
+  <meta name="theme-color" content="#8e1128">
+  <title>Início | Loja Natalina</title>
+  <link rel="icon" type="image/svg+xml" href="img/banners/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsivo.css">
+</head>
+<body>
+  <div class="topo-aviso">Um Natal cheio de carinho e boas ideias loja fictícia para trabalho escolar</div>
+  <header class="cabecalho">
+    <div class="container barra-navegacao">
+      <a class="marca" href="index.html" aria-label="Loja Natalina - página inicial"><span class="icone-marca" aria-hidden="true">✦</span>Loja <span>Natalina</span></a>
+      <nav id="menu" class="navegacao" aria-label="Navegação principal">
+        <a href="index.html" class="ativo" aria-current="page">Início</a>
+<a href="produtos.html">Produtos</a>
+<a href="sobre.html">Sobre nós</a>
+<a href="galeria.html">Galeria</a>
+<a href="contato.html">Contato</a>
+      </nav>
+      <div class="acoes-topo">
+        <button type="button" class="botao-cabecalho" id="botaoSom" title="Ouvir sininho de Natal" aria-label="Ouvir sininho de Natal">♫</button>
+        <button type="button" class="botao-cabecalho" id="abrirCarrinho" title="Abrir carrinho" aria-expanded="false" aria-controls="fundoCarrinho" aria-label="Abrir carrinho de demonstração">🛒 <span id="numeroCarrinho" class="numero-carrinho" aria-live="polite">0</span></button>
+        <button type="button" class="botao-cabecalho botao-menu" id="botaoMenu" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">☰</button>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="hero" aria-label="Novidades de Natal">
+      <div class="slide ativo" style="background-image:url('img/banners/banner-1.webp')" aria-hidden="false">
+        <div class="container"><div class="slide-conteudo">
+          <span class="chamada">Chegou a época mais mágica</span>
+          <h1>O encanto do Natal começa aqui.</h1>
+          <p>Árvores, enfeites e detalhes especiais para deixar cada cantinho cheio de alegria.</p>
+          <a class="btn btn-verde" href="produtos.html">Explorar produtos →</a>
+        </div></div>
+      </div>
+      <div class="slide" style="background-image:url('img/banners/banner-2.webp')" aria-hidden="true">
+        <div class="container"><div class="slide-conteudo">
+          <span class="chamada">Surpresas para compartilhar</span>
+          <h2>Presentes que espalham carinho.</h2>
+          <p>Ideias de presentes natalinos para tornar momentos simples ainda mais especiais.</p>
+          <a class="btn btn-verde" href="produtos.html?categoria=Presentes">Ver presentes →</a>
+        </div></div>
+      </div>
+      <div class="slide" style="background-image:url('img/banners/banner-3.webp')" aria-hidden="true">
+        <div class="container"><div class="slide-conteudo">
+          <span class="chamada">Brilhe nesta temporada</span>
+          <h2>Luzes, cores e muita magia.</h2>
+          <p>Ilumine a casa e monte um Natal com a sua personalidade.</p>
+          <a class="btn btn-verde" href="produtos.html?categoria=Ilumina%C3%A7%C3%A3o">Ver iluminação →</a>
+        </div></div>
+      </div>
+      <div class="controles-slide">
+        <button class="seta-slide" id="slideAnterior" type="button" aria-label="Banner anterior">‹</button>
+        <div class="pontos-slide"><button class="ponto-slide ativo" type="button" aria-label="Banner 1"></button><button class="ponto-slide" type="button" aria-label="Banner 2"></button><button class="ponto-slide" type="button" aria-label="Banner 3"></button></div>
+        <button class="seta-slide" id="slideProximo" type="button" aria-label="Próximo banner">›</button>
+      </div>
+    </section>
+    <section class="beneficios" aria-label="Benefícios da loja">
+      <div class="container grade-beneficios">
+        <div class="beneficio"><span class="simbolo" aria-hidden="true">✧</span><div><b>Feito para celebrar</b><small>O clima especial do Natal</small></div></div>
+        <div class="beneficio"><span class="simbolo" aria-hidden="true">❄</span><div><b>50 produtos</b><small>Enfeites, luzes e presentes</small></div></div>
+        <div class="beneficio"><span class="simbolo" aria-hidden="true">♡</span><div><b>Escolha com carinho</b><small>Catálogo ilustrativo</small></div></div>
+      </div>
+    </section>
+    <section class="secao">
+      <div class="container">
+        <div class="titulo-secao"><span class="marca-texto">Escolhas especiais</span><h2>Produtos em destaque</h2><p>Alguns dos nossos favoritos para esta época do ano.</p></div>
+        <div id="produtosDestaque" class="grade-produtos"></div>
+        <div class="centralizado"><a class="btn btn-vermelho" href="produtos.html">Ver os 50 produtos →</a></div>
+      </div>
+    </section>
+    <section class="faixa-parallax" aria-label="Decoração natalina">
+      <div class="container"><span class="marca-texto">Celebre cada detalhe</span><h2>Uma casa. Infinitas memórias.</h2><p>A decoração certa transforma qualquer cantinho em um lugar cheio de histórias para contar.</p><a href="galeria.html" class="btn btn-claro">Conhecer a galeria →</a></div>
+    </section>
+    <section class="secao">
+      <div class="container"><div class="titulo-secao"><span class="marca-texto">Encontre seu estilo</span><h2>Compre por categoria</h2><p>Escolha o tipo de decoração para começar.</p></div>
+        <div class="grade-categorias">
+          <a class="categoria-card" href="produtos.html?categoria=%C3%81rvores%20de%20Natal"><img src="img/produtos/01-arvore-classica-1-80-m.webp" alt="Árvore de Natal decorada" loading="lazy"><span>Árvores de Natal ↗</span></a>
+          <a class="categoria-card" href="produtos.html?categoria=Guirlandas"><img src="img/produtos/23-guirlanda-tradicional.webp" alt="Guirlanda de Natal" loading="lazy"><span>Guirlandas ↗</span></a>
+          <a class="categoria-card" href="produtos.html?categoria=Ilumina%C3%A7%C3%A3o"><img src="img/produtos/17-pisca-pisca-branco-quente.webp" alt="Luzes de Natal" loading="lazy"><span>Iluminação ↗</span></a>
+          <a class="categoria-card" href="produtos.html?categoria=Presentes"><img src="img/produtos/35-caixa-para-presente.webp" alt="Caixa de presente de Natal" loading="lazy"><span>Presentes ↗</span></a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer class="rodape">
+    <div class="container">
+      <div class="rodape-topo">
+        <div>
+          <a href="index.html" class="marca"> Loja <span>Natalina</span></a>
+          <p>Para deixar seu Natal ainda mais especial. Projeto de loja virtual desenvolvido em HTML, CSS e JavaScript.</p>
+        </div>
+        <div>
+          <strong>Explore a loja</strong>
+          <div class="links-rodape"><a href="index.html">Início</a><a href="produtos.html">Produtos</a><a href="sobre.html">Sobre nós</a><a href="galeria.html">Galeria</a><a href="contato.html">Contato</a></div>
+          <p>Atendimento fictício: segunda a sexta, das 9h às 18h.</p>
+        </div>
+      </div>
+      <div class="rodape-inferior">© Loja Natalina — Projeto escolar demonstrativo. Preços fictícios. Não realiza vendas ou pagamentos.</div>
+    </div>
+  </footer>
+  <!-- Carrinho compartilhado em todas as páginas. -->
+  <div id="fundoCarrinho" class="fundo-carrinho">
+    <aside class="painel-carrinho" role="dialog" aria-modal="true" aria-label="Seu carrinho de demonstração">
+      <div class="painel-topo"><h2>Seu carrinho</h2><button type="button" class="botao-fechar" id="fecharCarrinho" aria-label="Fechar carrinho">×</button></div>
+      <p>Escolha seus produtos preferidos para ver o total.</p>
+      <div id="itensCarrinho" class="itens-carrinho"></div>
+      <p id="carrinhoVazio" class="vazio">Seu carrinho está vazio.</p>
+      <div class="total-carrinho">
+        <p><span>Total</span><span id="totalCarrinho">R$ 0,00</span></p>
+        <small>Somente demonstração: nenhuma compra ou cobrança é realizada.</small>
+        <button id="limparCarrinho" type="button" class="btn btn-outline" style="width:100%">Esvaziar carrinho</button>
+      </div>
+    </aside>
+  </div>
+  <!-- Modal de produto: abre ao clicar em 'Detalhes'. -->
+  <dialog id="modalProduto" class="modal" aria-label="Detalhes do produto">
+    <div class="modal-corpo">
+      <div class="modal-titulo"><h2>Detalhes do produto</h2><button type="button" class="botao-fechar" id="fecharModalProduto" aria-label="Fechar detalhes">×</button></div>
+      <div class="modal-produto-grid" id="conteudoModalProduto"></div>
+    </div>
+  </dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="js/produtos.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

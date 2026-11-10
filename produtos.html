@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Catálogo com exatamente 50 produtos natalinos, pesquisa e filtro por categoria.">
+  <meta name="theme-color" content="#8e1128">
+  <title>Produtos | Loja Natalina</title>
+  <link rel="icon" type="image/svg+xml" href="img/banners/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsivo.css">
+</head>
+<body>
+  <div class="topo-aviso">Um Natal cheio de carinho e boas ideias  Loja fictícia para trabalho escolar</div>
+  <header class="cabecalho">
+    <div class="container barra-navegacao">
+      <a class="marca" href="index.html" aria-label="Loja Natalina - página inicial"><span class="icone-marca" aria-hidden="true">✦</span>Loja <span>Natalina</span></a>
+      <nav id="menu" class="navegacao" aria-label="Navegação principal">
+        <a href="index.html">Início</a>
+<a href="produtos.html" class="ativo" aria-current="page">Produtos</a>
+<a href="sobre.html">Sobre nós</a>
+<a href="galeria.html">Galeria</a>
+<a href="contato.html">Contato</a>
+      </nav>
+      <div class="acoes-topo">
+        <button type="button" class="botao-cabecalho" id="botaoSom" title="Ouvir sininho de Natal" aria-label="Ouvir sininho de Natal">♫</button>
+        <button type="button" class="botao-cabecalho" id="abrirCarrinho" title="Abrir carrinho" aria-expanded="false" aria-controls="fundoCarrinho" aria-label="Abrir carrinho de demonstração">🛒 <span id="numeroCarrinho" class="numero-carrinho" aria-live="polite">0</span></button>
+        <button type="button" class="botao-cabecalho botao-menu" id="botaoMenu" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">☰</button>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="faixa-titulo"><div class="container"><span class="marca-texto">Nosso catálogo</span><h1>Escolha seu detalhe favorito</h1><p>Encontre entre os 50 produtos natalinos da nossa loja fictícia.</p></div></section>
+    <section class="secao-curta"><div class="container">
+      <div class="filtros">
+        <div class="campo"><label for="pesquisaProduto">Pesquisar produto</label><input type="search" id="pesquisaProduto" placeholder="Ex.: árvore, guirlanda, vela..." autocomplete="off"></div>
+        <div class="campo"><label for="filtroCategoria">Categoria</label><select id="filtroCategoria"><option value="">Todas as categorias</option><option value="Árvores de Natal">Árvores de Natal</option><option value="Enfeites e Bolas">Enfeites e Bolas</option><option value="Iluminação">Iluminação</option><option value="Guirlandas">Guirlandas</option><option value="Papai Noel">Papai Noel</option><option value="Presentes">Presentes</option><option value="Roupas Natalinas">Roupas Natalinas</option><option value="Decoração e Utensílios">Decoração e Utensílios</option></select></div>
+        <button type="button" id="limparFiltro" class="btn btn-outline limpar-filtro">Limpar filtros</button>
+      </div>
+      <div class="linha-resultados"><span id="contadorProdutos" role="status" aria-live="polite">Exibindo 50 produtos</span><span>Valores fictícios</span></div>
+      <div id="listaProdutos" class="grade-produtos"></div>
+      <p id="nenhumProduto" class="vazio" hidden>Nenhum produto encontrado. Experimente outro nome ou categoria.</p>
+    </div></section>
+
+  </main>
+  <footer class="rodape">
+    <div class="container">
+      <div class="rodape-topo">
+        <div>
+          <a href="index.html" class="marca"> Loja <span>Natalina</span></a>
+          <p>Para deixar seu Natal ainda mais especial. Projeto de loja virtual desenvolvido em HTML, CSS e JavaScript.</p>
+        </div>
+        <div>
+          <strong>Explore a loja</strong>
+          <div class="links-rodape"><a href="index.html">Início</a><a href="produtos.html">Produtos</a><a href="sobre.html">Sobre nós</a><a href="galeria.html">Galeria</a><a href="contato.html">Contato</a></div>
+          <p>Atendimento fictício: segunda a sexta, das 9h às 18h.</p>
+        </div>
+      </div>
+      <div class="rodape-inferior">© Loja Natalina — Projeto escolar demonstrativo. Preços fictícios. Não realiza vendas ou pagamentos.</div>
+    </div>
+  </footer>
+  <!-- Carrinho compartilhado em todas as páginas. -->
+  <div id="fundoCarrinho" class="fundo-carrinho">
+    <aside class="painel-carrinho" role="dialog" aria-modal="true" aria-label="Seu carrinho de demonstração">
+      <div class="painel-topo"><h2>Seu carrinho</h2><button type="button" class="botao-fechar" id="fecharCarrinho" aria-label="Fechar carrinho">×</button></div>
+      <p>Escolha seus produtos preferidos para ver o total.</p>
+      <div id="itensCarrinho" class="itens-carrinho"></div>
+      <p id="carrinhoVazio" class="vazio">Seu carrinho está vazio.</p>
+      <div class="total-carrinho">
+        <p><span>Total</span><span id="totalCarrinho">R$ 0,00</span></p>
+        <small>Somente demonstração: nenhuma compra ou cobrança é realizada.</small>
+        <button id="limparCarrinho" type="button" class="btn btn-outline" style="width:100%">Esvaziar carrinho</button>
+      </div>
+    </aside>
+  </div>
+  <!-- Modal de produto: abre ao clicar em 'Detalhes'. -->
+  <dialog id="modalProduto" class="modal" aria-label="Detalhes do produto">
+    <div class="modal-corpo">
+      <div class="modal-titulo"><h2>Detalhes do produto</h2><button type="button" class="botao-fechar" id="fecharModalProduto" aria-label="Fechar detalhes">×</button></div>
+      <div class="modal-produto-grid" id="conteudoModalProduto"></div>
+    </div>
+  </dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="js/produtos.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Formulário fictício com validação, informações e redes sociais da Loja Natalina.">
+  <meta name="theme-color" content="#8e1128">
+  <title>Contato | Loja Natalina</title>
+  <link rel="icon" type="image/svg+xml" href="img/banners/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsivo.css">
+</head>
+<body>
+  <div class="topo-aviso">Um Natal cheio de carinho e boas ideias ✨ Loja fictícia para trabalho escolar</div>
+  <header class="cabecalho">
+    <div class="container barra-navegacao">
+      <a class="marca" href="index.html" aria-label="Loja Natalina - página inicial"><span class="icone-marca" aria-hidden="true">✦</span>Loja <span>Natalina</span></a>
+      <nav id="menu" class="navegacao" aria-label="Navegação principal">
+        <a href="index.html">Início</a>
+<a href="produtos.html">Produtos</a>
+<a href="sobre.html">Sobre nós</a>
+<a href="galeria.html">Galeria</a>
+<a href="contato.html" class="ativo" aria-current="page">Contato</a>
+      </nav>
+      <div class="acoes-topo">
+        <button type="button" class="botao-cabecalho" id="botaoSom" title="Ouvir sininho de Natal" aria-label="Ouvir sininho de Natal">♫</button>
+        <button type="button" class="botao-cabecalho" id="abrirCarrinho" title="Abrir carrinho" aria-expanded="false" aria-controls="fundoCarrinho" aria-label="Abrir carrinho de demonstração">🛒 <span id="numeroCarrinho" class="numero-carrinho" aria-live="polite">0</span></button>
+        <button type="button" class="botao-cabecalho botao-menu" id="botaoMenu" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">☰</button>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="faixa-titulo"><div class="container"><span class="marca-texto">Fale com a gente</span><h1>Entre em contato</h1><p>Preencha o formulário para testar a validação de campos em JavaScript.</p></div></section>
+    <section class="secao-curta"><div class="container contato-grid">
+      <form class="formulario" id="formContato" novalidate>
+        <h2>Envie uma mensagem</h2>
+        <div class="campo"><label for="nome">Nome *</label><input type="text" id="nome" name="nome" placeholder="Digite seu nome" required aria-describedby="erro-nome"><span id="erro-nome" class="erro-campo"></span></div>
+        <div class="campo"><label for="email">E-mail *</label><input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required aria-describedby="erro-email"><span id="erro-email" class="erro-campo"></span></div>
+        <div class="campo"><label for="assunto">Assunto *</label><select id="assunto" name="assunto" required aria-describedby="erro-assunto"><option value="">Escolha um assunto</option><option>Produtos</option><option>Dúvidas</option><option>Sugestão</option><option>Outro</option></select><span id="erro-assunto" class="erro-campo"></span></div>
+        <div class="campo"><label for="mensagem">Mensagem *</label><textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem..." required aria-describedby="erro-mensagem"></textarea><span id="erro-mensagem" class="erro-campo"></span></div>
+        <button type="submit" class="btn btn-vermelho">Validar mensagem →</button>
+        <p id="resultadoFormulario" class="aviso-form" role="status">Mensagem validada com sucesso! Este é um site escolar, por isso os dados não foram enviados.</p>
+        <p class="observacao">* Campos obrigatórios. O formulário é apenas um exemplo e não envia nem armazena dados.</p>
+      </form>
+      <aside class="dados-contato"><h2>Nossos contatos</h2>
+        <div class="dado"><strong>Telefone</strong><p>(00) 0000-0000 — fictício</p></div>
+        <div class="dado"><strong>Endereço</strong><p>Rua das Estrelas, 125 — Vila do Natal, Cidade Exemplo/SP (fictício).</p></div>
+        <div class="dado"><strong>Redes sociais</strong><p>Instagram: @lojanatalina.exemplo<br>Pinterest: Loja Natalina (exemplos fictícios)</p></div>
+        <div class="dado"><strong>Horário</strong><p>Segunda a sexta, das 9h às 18h (fictício).</p></div>
+        <div class="dado"><strong>Projeto escolar</strong><p>Você pode alterar estas informações no arquivo <code>contato.html</code> antes de apresentar o trabalho.</p></div>
+      </aside>
+    </div></section>
+
+  </main>
+  <footer class="rodape">
+    <div class="container">
+      <div class="rodape-topo">
+        <div>
+          <a href="index.html" class="marca">✦ Loja <span>Natalina</span></a>
+          <p>Para deixar seu Natal ainda mais especial. Projeto de loja virtual desenvolvido em HTML, CSS e JavaScript.</p>
+        </div>
+        <div>
+          <strong>Explore a loja</strong>
+          <div class="links-rodape"><a href="index.html">Início</a><a href="produtos.html">Produtos</a><a href="sobre.html">Sobre nós</a><a href="galeria.html">Galeria</a><a href="contato.html">Contato</a></div>
+          <p>Atendimento fictício: segunda a sexta, das 9h às 18h.</p>
+        </div>
+      </div>
+      <div class="rodape-inferior">© Loja Natalina — Projeto escolar demonstrativo. Preços fictícios. Não realiza vendas ou pagamentos.</div>
+    </div>
+  </footer>
+  <!-- Carrinho compartilhado em todas as páginas. -->
+  <div id="fundoCarrinho" class="fundo-carrinho">
+    <aside class="painel-carrinho" role="dialog" aria-modal="true" aria-label="Seu carrinho de demonstração">
+      <div class="painel-topo"><h2>Seu carrinho</h2><button type="button" class="botao-fechar" id="fecharCarrinho" aria-label="Fechar carrinho">×</button></div>
+      <p>Escolha seus produtos preferidos para ver o total.</p>
+      <div id="itensCarrinho" class="itens-carrinho"></div>
+      <p id="carrinhoVazio" class="vazio">Seu carrinho está vazio.</p>
+      <div class="total-carrinho">
+        <p><span>Total</span><span id="totalCarrinho">R$ 0,00</span></p>
+        <small>Somente demonstração: nenhuma compra ou cobrança é realizada.</small>
+        <button id="limparCarrinho" type="button" class="btn btn-outline" style="width:100%">Esvaziar carrinho</button>
+      </div>
+    </aside>
+  </div>
+  <!-- Modal de produto: abre ao clicar em 'Detalhes'. -->
+  <dialog id="modalProduto" class="modal" aria-label="Detalhes do produto">
+    <div class="modal-corpo">
+      <div class="modal-titulo"><h2>Detalhes do produto</h2><button type="button" class="botao-fechar" id="fecharModalProduto" aria-label="Fechar detalhes">×</button></div>
+      <div class="modal-produto-grid" id="conteudoModalProduto"></div>
+    </div>
+  </dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="js/produtos.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

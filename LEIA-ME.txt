@@ -1,0 +1,111 @@
+LOJA NATALINA — PROJETO ESCOLAR
+===============================================
+Site fictício feito somente com HTML5, CSS3 e JavaScript puro.
+5 páginas, 50 produtos, 50 fotos locais e 8 funcionalidades principais.
+Não precisa de internet, instalação, Node.js ou banco de dados.
+
+COMO ABRIR O SITE (PASSO A PASSO)
+-----------------------------------------------
+1. Se recebeu o arquivo ZIP, clique com o botão direito e escolha "Extrair tudo".
+2. Abra a pasta "loja-natalina" que foi extraída.
+3. Clique duas vezes em "index.html" para abrir no navegador.
+4. Use o menu para visitar as outras 4 páginas.
+
+IMPORTANTE: não retire os arquivos HTML das suas pastas e não mova as
+imagens. Se abrir só o index.html sem as pastas css/, js/ e img/,
+o visual não vai carregar corretamente.
+
+PÁGINAS
+-----------------------------------------------
+index.html     -> Início: carrossel, destaques e categorias.
+produtos.html  -> Catálogo de 50 produtos com busca e filtros.
+sobre.html     -> História fictícia, grupo e contagem para o Natal.
+galeria.html   -> Grade de fotos; clique para ampliar.
+contato.html   -> Formulário demonstrativo com validação.
+
+ESTRUTURA DE ARQUIVOS
+-----------------------------------------------
+loja-natalina/
+  index.html, produtos.html, sobre.html, galeria.html, contato.html
+  LEIA-ME.txt
+  css/style.css       -> Cores, botões, cards e estilos principais.
+  css/responsivo.css  -> Ajustes para tablet e celular.
+  js/produtos.js      -> Array com EXATAMENTE 50 objetos de produtos.
+  js/script.js        -> Ações do site em JavaScript puro.
+  img/produtos/       -> 50 fotos ilustrativas em formato WebP.
+  img/banners/        -> 3 banners, mais o favicon SVG.
+  audio/sininho.wav   -> Efeito sonoro curto, ativado ao clicar.
+
+COMO CADASTRAR OU ALTERAR UM PRODUTO
+-----------------------------------------------
+1. Abra js/produtos.js com o Bloco de Notas, VS Code ou outro editor.
+2. Dentro de "const produtos = [...]", encontre o objeto desejado.
+3. Altere o nome, a descricao, a categoria ou o preco.
+   ATENÇÃO: preco é número; use 39.90 (com ponto, sem R$).
+4. O campo imagem aponta para o arquivo local da foto.
+   Exemplo: "img/produtos/01-arvore-classica-1-80-m.webp".
+5. Salve o arquivo e atualize o navegador (F5).
+
+Para manter 50 produtos, edite os existentes. Se incluir ou excluir um
+objeto, a contagem do catálogo mudará.
+As fotos existentes foram feitas com geração de imagens por IA para
+este projeto. São ilustrações realistas: não são fotos de estoque real.
+Todas estão incluídas localmente, sem links externos ou textos de crédito
+sobre as próprias imagens.
+
+AS 8 FUNCIONALIDADES DE JAVASCRIPT
+-----------------------------------------------
+1. Carrossel automático: mostra 3 banners, troca a cada 5,5 segundos
+   e também possui setas e botões para trocar manualmente.
+2. Parallax: uma faixa da página inicial movimenta o fundo de forma
+   leve conforme a rolagem da página.
+3. Efeito sonoro: clique no botão ♫ do cabeçalho para ouvir o sino.
+   O áudio não começa sozinho.
+4. Produtos dinâmicos: o JavaScript lê o array com 50 objetos e cria
+   os cards com imagem, nome, categoria, descrição e preço.
+5. Busca e filtro: digite um nome ou selecione uma categoria. O contador
+   informa quantos produtos aparecem. 'Limpar filtros' restaura tudo.
+6. Carrinho demonstrativo: 'Adicionar' coloca produtos no carrinho;
+   os botões +, -, Remover e Esvaziar alteram a quantidade e o total.
+   O navegador tenta guardar o carrinho no localStorage.
+7. Validação de contato: o JavaScript verifica nome, e-mail, assunto
+   e mensagem. Se estiver correto, aparece uma confirmação visual.
+8. Contagem para o Natal: na página Sobre, o relógio mostra o tempo
+   restante até 25 de dezembro; atualiza a cada segundo.
+
+EXTRAS SIMPLES
+-----------------------------------------------
+- Botão 'Detalhes' abre janela com informações do produto.
+- Galeria com ampliação e navegação pelas imagens.
+- Menu adaptado para celular e neve decorativa no fundo.
+- Cada página tem links para as outras quatro.
+- As imagens usam texto alternativo para acessibilidade.
+
+INFORMAÇÕES IMPORTANTES PARA A APRESENTAÇÃO
+-----------------------------------------------
+* A loja é FICTÍCIA. Valores, telefone, endereço e redes são exemplos.
+* O carrinho NÃO realiza pagamentos, pedidos nem entregas reais.
+* O formulário NÃO envia informações, e-mails ou mensagens para ninguém.
+* Para colocar os nomes verdadeiros do grupo, edite sobre.html,
+  trocando 'Integrante 1', 'Integrante 2' etc.
+* O site usa imagens WebP. Esse formato é aceito pelos navegadores atuais
+  e costuma ocupar menos espaço que PNG ou JPG.
+* O site inteiro funciona off-line depois de extrair o ZIP.
+
+COMO PUBLICAR GRATUITAMENTE NO GITHUB PAGES
+-----------------------------------------------
+1. Crie um repositório público no GitHub (por exemplo, loja-natalina).
+2. Envie os ARQUIVOS QUE ESTÃO DENTRO da pasta loja-natalina para a raiz
+   do repositório (index.html precisa ficar na raiz).
+3. Abra as configurações do repositório: Settings > Pages.
+4. Em Build and deployment, escolha Deploy from a branch.
+5. Selecione a branch principal e a pasta / (root), depois Save.
+6. Quando a publicação terminar, abra a URL mostrada pelo GitHub Pages.
+Observação: não é necessário usar npm, build, React ou servidor.
+
+--------------------------------------------------------------------------
+Projeto produzido para aprendizado. Sem login, banco de dados ou checkout.
+--------------------------------------------------------------------------
+A imagem está no formato .webp porque esse é o padrão moderno recomendado para sites e lojas virtuais.
+------------------------------------------------------------------------------------------------------
+Feito por : Igor da siva camargo , Gabriel scutti , Nathan macena 

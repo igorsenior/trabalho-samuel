@@ -1,0 +1,131 @@
+/* LOJA NATALINA - Ajustes para tablets e celulares. */
+
+/* Tablet: três produtos por linha e menu compacto. */
+@media (max-width: 980px) {
+  .grade-produtos, .grade-categorias, .grade-galeria {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
+  .grade-equipe { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .barra-navegacao { gap: 12px; }
+  .marca { font-size: 1.55rem; }
+  .navegacao { gap: 12px; }
+  .sobre-historia { gap: 22px; }
+}
+
+/* O menu deixa de caber antes dos 720px: por isso abre em 900px. */
+@media (max-width: 900px) {
+  .botao-menu { display: inline-flex; }
+  .acoes-topo { margin-left: auto; }
+  .barra-navegacao { min-height: 65px; }
+  .navegacao {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 10px max(18px, calc((100vw - 1180px) / 2)) 16px;
+    background: #790f28;
+    box-shadow: 0 14px 20px #2507123d;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2px;
+    white-space: normal;
+  }
+  .navegacao.aberta { display: flex; }
+  .navegacao a { padding: 11px 12px; border-radius: 8px; }
+  .navegacao a:hover, .navegacao .ativo { background: #ffffff18; }
+  .filtros { grid-template-columns: minmax(0,1fr) minmax(190px,260px); }
+  .filtros .limpar-filtro { grid-column: 1 / -1; justify-self: end; }
+}
+
+/* Celulares e tablets pequenos. */
+@media (max-width: 720px) {
+  .container { width: calc(100% - 28px); }
+  .hero, .slide { min-height: 480px; }
+  .slide-conteudo { width: min(100%, 560px); padding: 65px 0 92px; }
+  .slide::before {
+    background: linear-gradient(90deg, #430b1ee8, #510e21d6 65%, #3e0a1e88);
+  }
+  .slide h1, .slide h2 { font-size: clamp(2.1rem, 7.5vw, 3.2rem); }
+  .slide p { font-size: 1rem; max-width: 430px; }
+  .grade-beneficios { gap: 12px; }
+  .beneficio { flex-direction: column; text-align: center; gap: 2px; }
+  .grade-produtos, .grade-categorias, .grade-galeria {
+    grid-template-columns: repeat(2, minmax(0,1fr));
+    gap: 14px;
+  }
+  .filtros { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .filtros .limpar-filtro { grid-column: 1 / -1; justify-self: stretch; }
+  .sobre-historia, .contato-grid { grid-template-columns: minmax(0, 1fr); }
+  .grade-valores { grid-template-columns: 1fr; gap: 13px; }
+  .secao { padding: 48px 0; }
+  .secao-curta { padding: 30px 0 48px; }
+  .faixa-titulo { padding: 42px 0 27px; }
+  .rodape .rodape-topo { flex-direction: column; gap: 22px; }
+  .modal-produto-grid { grid-template-columns: minmax(0, 1fr); }
+  .modal-produto-grid img { max-height: 240px; width: 100%; }
+}
+
+/* Celulares de até 460px: textos e botões sem cortes. */
+@media (max-width: 460px) {
+  .topo-aviso { font-size: .7rem; padding: 5px 8px; }
+  .marca { font-size: 1.18rem; letter-spacing: -.6px; }
+  .marca .icone-marca { font-size: 1.13rem; margin-right: 2px; }
+  .barra-navegacao { gap: 6px; }
+  .acoes-topo { gap: 5px; }
+  .botao-cabecalho { min-width: 36px; height: 36px; padding: 0 7px; }
+  .numero-carrinho { min-width: 19px; height: 19px; font-size: .67rem; }
+  .hero, .slide { min-height: 460px; }
+  .slide-conteudo { padding: 58px 0 95px; }
+  .slide h1, .slide h2 { font-size: clamp(2rem, 9vw, 2.55rem); }
+  .slide p { font-size: .95rem; }
+  .controles-slide { bottom: 17px; }
+  .grade-beneficios { grid-template-columns: 1fr; gap: 8px; padding: 14px 0; }
+  .beneficio { flex-direction: row; text-align: left; justify-content: flex-start; gap: 12px; }
+  .beneficio .simbolo { width: 27px; font-size: 1.5rem; text-align: center; }
+  .beneficio b { font-size: .85rem; }
+  .beneficio small { font-size: .72rem; }
+  .grade-produtos { gap: 11px; }
+  .info-produto { padding: 11px 10px 12px; }
+  .info-produto h3 { font-size: .91rem; }
+  .info-produto .descricao { font-size: .77rem; }
+  .preco { font-size: 1.05rem; }
+  .acoes-produto { flex-direction: column; }
+  .acoes-produto .btn { flex: auto; width: 100%; font-size: .81rem; padding: 9px 5px; }
+  .grade-galeria { gap: 9px; }
+  .foto-galeria span { padding: 8px; font-size: .77rem; }
+  .filtros { grid-template-columns: 1fr; padding: 15px; gap: 13px; }
+  .filtros .limpar-filtro { grid-column: auto; }
+  .linha-resultados { flex-wrap: wrap; font-size: .86rem; }
+  .grade-equipe { gap: 11px; }
+  .contagem { gap: 7px; }
+  .tempo { min-width: 0; flex: 1; max-width: 90px; padding: 10px 5px; }
+  .tempo strong { font-size: 1.45rem; }
+  .tempo span { font-size: .7rem; }
+  .formulario, .dados-contato { padding: 19px; }
+  .painel-carrinho { padding: 16px; padding-bottom: max(16px, env(safe-area-inset-bottom)); }
+  .modal-corpo { padding: 15px; }
+  .modal-titulo h2 { font-size: 1.25rem; }
+  .modal-galeria-controles { flex-wrap: wrap; }
+  .modal-galeria-controles span { order: -1; flex-basis: 100%; }
+}
+
+/* Em telas muito estreitas, um produto por linha fica legível. */
+@media (max-width: 340px) {
+  .marca { font-size: 1rem; }
+  .marca .icone-marca { font-size: .98rem; }
+  .botao-cabecalho { min-width: 33px; height: 34px; padding: 0 5px; }
+  .grade-produtos, .grade-galeria, .grade-categorias { grid-template-columns: 1fr; }
+}
+
+/* Respeita as configurações de acessibilidade do aparelho. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+  .neve { display: none; }
+}
